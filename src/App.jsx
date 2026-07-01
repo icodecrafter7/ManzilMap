@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 import Home from "./pages/Home";
 
-// ✅ ADD THIS LINE
+// Test
 import Test from "./Test";
 
 // Flights
@@ -35,12 +34,12 @@ import Register from "./pages/auth/Register";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ManzilMap">
       <Routes>
-
+        {/* Home */}
         <Route path="/" element={<Home />} />
 
-        {/* ✅ ADD THIS ROUTE */}
+        {/* Test */}
         <Route path="/test" element={<Test />} />
 
         {/* Flights */}
@@ -51,7 +50,7 @@ function App() {
         {/* Hotels */}
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/hotels/results" element={<HotelResults />} />
-<Route path="/hotels/details" element={<HotelDetails />} />
+        <Route path="/hotels/details" element={<HotelDetails />} />
 
         {/* Bus */}
         <Route path="/bus" element={<Bus />} />
@@ -68,7 +67,6 @@ function App() {
         {/* Auth */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-
       </Routes>
     </Router>
   );
